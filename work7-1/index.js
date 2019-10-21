@@ -18,5 +18,5 @@ function sort(method){
 
     console.log(logValues.next())
 
-    setTimeout("showLog(logValues)", 50)
+    setTimeout("showLog(logValues,showDiv)", 50)
 }

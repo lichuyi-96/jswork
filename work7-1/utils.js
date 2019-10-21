@@ -36,7 +36,7 @@ function insertSort(str){
             sortLog.push([arr.concat(),[j-1,j]])
             sortLog.push([arr.concat(),[j-1,j]])
             sortLog.push([arr.concat(),[j-1,j]])
-            if(arr[j-1],arr[j]){
+            if(arr[j-1]>arr[j]){
                 [arr[j-1],arr[j]]=[arr[j],arr[j-1]]
                 sortLog.push([arr.concat(),[j-1,j]])
             }
@@ -47,13 +47,10 @@ function insertSort(str){
 }
     function
     showLog(logValues,showElement)  {
-        let str = ""
-    }  
+        let str = ''
+    
 
-    let{
-        done,
-        value: [row, pos]
-    } = logValues.next()
+    let{ done, value: [row, pos]} = logValues.next()
 
 
 
@@ -66,12 +63,12 @@ function insertSort(str){
              color +'">' + row[key] +'</span>' 
     }
 
-    showElement.innerHTML = str
+    showElement.innerHTML=str
 
 
-    if (pos[0] != -1)
+    if (pos[0] !== -1)
       setTimeout("showLog(logValues,showDiv)", 500)
-
+}
     
 
 
