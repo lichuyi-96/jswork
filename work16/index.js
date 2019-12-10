@@ -2,13 +2,12 @@
 function $(id) {
     return document.getElementById(id);
 }
-
 $('smallBox').onmouseover = function () {
     $('mask').style.display = 'block';
     $('bigBox').style.display = 'block';
 };
 
-$('smallBox').onmousemove  = function () {
+$('smallBox').onmouseout  = function () {
 
 $('mask').style.display = 'none';
 $('bigBox').style.display = 'none';
@@ -39,4 +38,16 @@ if(maskY <0){
 if (maskY > $('smallBox').offsetHeight - $('mask').offsetHeight){
     maskY = $('smallBox').offsetHeight - $('mask').offsetHeight;
 }
+
+$('mask').style.left = maskX + 'px';
+$('mask').style.top = maskY + 'px';
+
+var bigImgToMove = $('bigImg').offsetWidth - $('bigBox').offsetWidth;
+
+var maskToMove = $('samlllBox').offsetWidth - $('mask').offsetWidth;
+
+var rate = bigImgToMove / maskToMove;
+
+$('bigImg').style.left = -rate * maskX + 'px';
+$('bigImg').style.top = -rate * maskY + 'px';
 }
