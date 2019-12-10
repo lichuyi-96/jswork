@@ -10,7 +10,7 @@
         for (let i in defCart){
             cart.add(defCart[i]);
         }
-        cart.updateToal();
+        cart.updateTotal();
     };
     /**
      * Cart 购物车商品管理

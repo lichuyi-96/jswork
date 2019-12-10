@@ -75,7 +75,7 @@
     background-color: #FF9900;;
 }
 
-.cart-nuum{
+.cart-num{
     margin: 5px;
     width: 35px;
     text-align: center;
@@ -88,12 +88,12 @@
 }
 
 .cart-del,
-.cart-all{
+.cart-all ,.cart-unall{
     color: #3366D4;
 }
 
 .cart-del:hover,
-.cart-all:hover{
+.cart-all , .cart-unall:hover{
     text-decoration: underline;
     cursor: pointer;
 }
