@@ -1,5 +1,5 @@
 .cart {
-    width: 700;
+    width: 700px;
     padding: 0 10px ;
     border: 1px solid #D5E5F5;    
 }
@@ -72,7 +72,7 @@
 
 .cart-reduce:hover,
 .cart-add:hover{
-    background-color: #FF9900;;
+    background-color: #FF9900;
 }
 
 .cart-num{

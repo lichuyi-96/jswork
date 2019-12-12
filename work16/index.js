@@ -24,7 +24,7 @@ var boxX = pageX - $('box').offsetLeft;
 var boxY = pageY - $('box').offsetTop;
 
 var maskX = boxX - $('mask').offsetWidth/2;
-var maskY = boxY - $('mask').offsetTop/2;
+var maskY = boxY - $('mask').offsetHeight/2;
 
 if(maskX < 0) {
     maskX = 0;
@@ -44,7 +44,7 @@ $('mask').style.top = maskY + 'px';
 
 var bigImgToMove = $('bigImg').offsetWidth - $('bigBox').offsetWidth;
 
-var maskToMove = $('samlllBox').offsetWidth - $('mask').offsetWidth;
+var maskToMove = $('smallBox').offsetWidth - $('mask').offsetWidth;
 
 var rate = bigImgToMove / maskToMove;
 
