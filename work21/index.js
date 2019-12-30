@@ -41,6 +41,12 @@ $(function(){
             $('.hot').css({
                 left:-($('.hot li').length - 1) * width
             });
+        }
+        $('.hot').stop().animate({
+            left:-i*width
+        },speed);
+        dotChange();
+    });
 
             function imgChange(){
                 ++i;
@@ -55,16 +61,16 @@ $(function(){
                         left:0
                     });
                 }
-                $('hot').stop().animate({
+                $('.hot').stop().animate({
                     left:-i*width
                 },speed);
             }
 
             function dotChange(){
-                if(i==$('.dot li').length - 1){
-
+                if(i==$('.hot li').length - 1){
+                  $('.dot li').eq(0).addClass('on').siblings().removeClass('on');
+                }else{
+                    $('.dot li').eq(i).addClass('on').siblings().removeClass('on');
                 }
             }
-        }
-    })
-})
+    });
